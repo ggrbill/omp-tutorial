@@ -27,9 +27,9 @@ int main()
     std::fill(c.begin(), c.end(), 0.0);
     std::fill(d.begin(), d.end(), 0.0);
 
-    // Print number of threads 
+    // Print max number of threads (all threads available in the computer) 
     n_threads = omp_get_max_threads();
-    std::cout << "Number of threads: " << n_threads << std::endl;
+    std::cout << "Max number of threads: " << n_threads << std::endl;
 
     // Fork a team of threads
     #pragma omp parallel private(thread_id)
