@@ -13,7 +13,8 @@ int main()
         // Delay each thread to avoid race condition on std::cout
         usleep(5000 * thread_id);
         if (thread_id == 0)
-        {   // Print number of threads only in the main thread
+        {
+            // Print number of threads only in the main thread
             n_threads = omp_get_num_threads();
             std::cout << "Number of threads: " << n_threads << std::endl;
         }

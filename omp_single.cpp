@@ -19,12 +19,13 @@ int main()
     {
         #pragma omp single
         {
+            // Print number of threads only in one available thread
             n_threads = omp_get_num_threads();
             std::cout << "Parallel Region Start ..." << std::endl;
             std::cout << "Number of threads = " << n_threads << std::endl;
-            // Delay each thread to avoid race condition on std::cout
         }
         thread_id = omp_get_thread_num();
+        // Delay each thread to avoid race condition on std::cout
         usleep(5000 * thread_id);
         #pragma omp for
         for (int i = 0; i < size; i++)
