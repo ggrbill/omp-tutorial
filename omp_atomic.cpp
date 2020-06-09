@@ -14,7 +14,7 @@ int main()
     double dot_prod = 0.0;
 
     // Fork a team of threads
-    // Note "private aux_dot" and "shared dot_prod" variables
+    // Note "shared dot_prod" variable
     #pragma omp parallel private(n_threads, thread_id) shared(dot_prod)
     {
         #pragma omp single
