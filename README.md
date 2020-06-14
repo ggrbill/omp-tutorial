@@ -4,7 +4,7 @@ Tutorial of OpenMP in C++.
 
 ## Compilation
 
-To compile any of the codes in this repository execute:
+To compile any of the codes in this repository execute (inside `src` folder):
 
 ```shell
 $ g++ -fopenmp {filename}.cpp
